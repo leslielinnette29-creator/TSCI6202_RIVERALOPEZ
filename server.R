@@ -8,9 +8,12 @@
 #
 
 library(shiny)
+library(survminer)
+library(ggsurvfit)
+library(jskm)
 
 # Define server logic required to draw a histogram
-function(input, output, session) {
+     function(input, output, session) {
 
     output$distPlot <- renderPlot({
 
@@ -24,5 +27,3 @@ function(input, output, session) {
              main = 'Histogram of waiting times')
 
     })
-
-}
