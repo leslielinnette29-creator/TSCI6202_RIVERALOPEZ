@@ -51,4 +51,14 @@ ggplot(data=FQHC_C2)+
   tm_dots(fill="orange")
   
   
+  # this goes at the end of geodata.R
+  
+  
+  save(
+    FQHC_C2,
+    shapefile_addresses,
+    file = 'GeoDATA1.RData'
+  )
+  
+  
   

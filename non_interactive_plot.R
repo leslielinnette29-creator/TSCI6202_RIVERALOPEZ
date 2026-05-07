@@ -23,7 +23,7 @@ survfit2(Surv(timetoevent,event=censor)~STATE, data=demographics) %>%
   ggsurvplot(data=demographics)
 
 
-fit<- survfit(Surv(timetoevent,event=censor)~STATE, data=demographics)
+
 
 # Customized survival curves
 ggsurvplot(fit, data = demographics,
@@ -181,42 +181,42 @@ subset(demographics,is.na(MARITAL)&RACE=="asian")
        
        pchShow()
 
-       ggplot(demographics, aes(x=INCOME, y=log(HEALTHCARE_EXPENSES))) +
-         
-         geom_point(color="darkgreen", size=0.5, alpha=.1) + #alpha= transparency
-         
-         geom_smooth(fill="blue", color="darkred", alpha=.2)+
-         
-         geom_smooth(method = "lm", se=FALSE)+
-         
-         geom_abline(slope = 1, intercept = 0, color="darkorange", linetype = 2)+
-         
-         theme_classic()
-       
-       ggplot(mtcars, aes(x=wt, y=mpg)) +
-         
-         geom_point(color="darkgreen", size=0.5, alpha=1) + #alpha= transparency
-         
-         geom_smooth(fill="blue", color="darkred", alpha=.2)+
-         
-         geom_smooth(method = "lm", se=FALSE)+
-         
-         geom_abline(slope = 1, intercept = 0, color="darkorange", linetype = 2)+
-         
-         theme_classic()
-       
-       ggplot(demographics, aes(x=HEALTHCARE_COVERAGE, y=log(HEALTHCARE_EXPENSES))) +
-         
-         geom_point(color="darkgreen", size=0.5, alpha=.1) + #alpha= transparency
-         
-         geom_smooth(fill="blue", color="darkred", alpha=.2)+
-         
-         geom_smooth(method = "lm", se=FALSE)+
-         
-         geom_abline(slope = 1, intercept = 0, color="darkorange", linetype = 2)+
-         
-         theme_classic()
-       
+ggplot(demographics, aes(x=INCOME, y=log(HEALTHCARE_EXPENSES))) +
+ 
+ geom_point(color="darkgreen", size=0.5, alpha=.1) + #alpha= transparency
+ 
+ geom_smooth(fill="blue", color="darkred", alpha=.2)+
+ 
+ geom_smooth(method = "lm", se=FALSE)+
+ 
+ geom_abline(slope = 1, intercept = 0, color="darkorange", linetype = 2)+
+ 
+ theme_classic()
+
+ggplot(mtcars, aes(x=wt, y=mpg)) +
+ 
+ geom_point(color="darkgreen", size=0.5, alpha=1) + #alpha= transparency
+ 
+ geom_smooth(fill="blue", color="darkred", alpha=.2)+
+ 
+ geom_smooth(method = "lm", se=FALSE)+
+ 
+ geom_abline(slope = 1, intercept = 0, color="darkorange", linetype = 2)+
+ 
+ theme_classic()
+
+ggplot(demographics, aes(x=HEALTHCARE_COVERAGE, y=log(HEALTHCARE_EXPENSES))) +
+ 
+ geom_point(color="darkgreen", size=0.5, alpha=.1) + #alpha= transparency
+ 
+ geom_smooth(fill="blue", color="darkred", alpha=.2)+
+ 
+ geom_smooth(method = "lm", se=FALSE)+
+ 
+ geom_abline(slope = 1, intercept = 0, color="darkorange", linetype = 2)+
+ 
+ theme_classic()
+
 #myplot0
 myplot0<-list(geom_point(color="darkgreen", size=0.5, alpha=.7) , #alpha= transparency
                 
